@@ -5,6 +5,8 @@ import 'package:shop_application/providers/product_provider.dart';
 class ProductDetailScreen extends StatelessWidget {
   static const routeName = '/product-detail';
 
+  const ProductDetailScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final productId = ModalRoute.of(context)!.settings.arguments as String;
@@ -48,7 +50,7 @@ class ProductDetailScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 softWrap: true,
               ),
-            )
+            ),
           ],
         ),
       ),
