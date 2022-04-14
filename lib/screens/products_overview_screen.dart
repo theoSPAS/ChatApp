@@ -5,6 +5,8 @@ import 'package:shop_application/widgets/products_grid.dart';
 enum FilterOptions { favorites, all }
 
 class ProductOverviewScreen extends StatefulWidget {
+  const ProductOverviewScreen({Key? key}) : super(key: key);
+
   @override
   State<ProductOverviewScreen> createState() => _ProductOverviewScreenState();
 }
@@ -28,13 +30,13 @@ class _ProductOverviewScreenState extends State<ProductOverviewScreen> {
                   }
                 });
               },
-              icon: Icon(Icons.more_vert),
+              icon: const Icon(Icons.more_vert),
               itemBuilder: (_) => [
-                    PopupMenuItem(
+                const PopupMenuItem(
                       child: Text('Only Favorites'),
                       value: FilterOptions.favorites,
                     ),
-                    PopupMenuItem(
+                const PopupMenuItem(
                         child: Text('All items'), value: FilterOptions.all),
                   ]),
         ],

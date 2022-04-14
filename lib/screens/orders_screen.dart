@@ -7,12 +7,14 @@ import 'package:shop_application/widgets/order_item.dart';
 class OrderScreen extends StatelessWidget {
   static const routeName = '/orders';
 
+  const OrderScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final orderData = Provider.of<Order>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your Orders'),
+        title: const Text('Your Orders'),
       ),
       drawer: AppDrawer(),
       body: ListView.builder(

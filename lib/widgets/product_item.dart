@@ -5,6 +5,8 @@ import 'package:shop_application/screens/cart_screen.dart';
 import 'package:shop_application/screens/product_detail_screen.dart';
 
 class ProductItem extends StatelessWidget {
+  const ProductItem({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final product = Provider.of<Product>(context, listen: false);
@@ -26,12 +28,11 @@ class ProductItem extends StatelessWidget {
                 icon: Icon(
                   product.isFavorite ? Icons.favorite : Icons.favorite_border,
                 ),
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
                 onPressed: () {
                   product.toggleFavorStatus();
                   },
               ),
-              //child: Text('Never Changes!'),
             ),
             backgroundColor: Colors.black87,
             title: Text(
@@ -40,7 +41,7 @@ class ProductItem extends StatelessWidget {
             ),
             trailing: IconButton(
               icon: const Icon(Icons.shopping_cart),
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
               onPressed: () {
                 Navigator.of(context).pushNamed(
                   CartScreen.routeName
