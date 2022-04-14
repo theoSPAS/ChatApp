@@ -27,16 +27,16 @@ class CartItem extends StatelessWidget {
          Provider.of<Cart>(context, listen: false).removeItem(productId);
       },
       child: Card(
-        margin: EdgeInsets.symmetric(
+        margin: const EdgeInsets.symmetric(
           horizontal: 15,
           vertical: 4,
         ),
         child: Padding(
-          padding: EdgeInsets.all(8),
+          padding: const  EdgeInsets.all(8),
           child: ListTile(
             leading: CircleAvatar(
               child: Padding(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: FittedBox(child: Text('\$$price')),
               ),
             ),
