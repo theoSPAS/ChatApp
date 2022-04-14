@@ -33,7 +33,6 @@ class ProductItem extends StatelessWidget {
                   product.toggleFavorStatus();
                   },
               ),
-              //child: Text('Never Changes!'),
             ),
             backgroundColor: Colors.black87,
             title: Text(
